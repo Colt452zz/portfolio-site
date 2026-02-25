@@ -12,7 +12,6 @@ const solutionStatus = document.getElementById('status');
 
 // ---- STATE ----
 let clicks = 0;
-let skipped = false;
 
 // ---- PROGRESSION ----
 function tier(clicks) {
@@ -140,6 +139,6 @@ resetButton.addEventListener('click', () => {
 });
 
 // ---- INIT ----
-clicks = Number(localStorage.getItem('clicks'));
+clicks = Number(localStorage.getItem('clicks')) || 0;
 additionProblem.generate();
 render();

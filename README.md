@@ -1,7 +1,5 @@
 # Personal Portfolio Website
 
-## Description:
-
 *This is my personal portfolio website built using HTML, CSS, and JavaScript. It will be used to experiment with UI, game logic, and progressive feature unlocking. It is an ongoing project that will be expanded over time.*
 
 ## Features:
@@ -21,7 +19,7 @@
 
 ## To run locally:
 
-- Clone the repo and open [index.html](https://github.com/Colt452zz/portfolio-site/blob/main/index.html) in a browser.
+- Clone the repo and open [index.html](https://github.com/Colt452zz/portfolio-site/blob/main/index.html) in a browser
 
 ## Future plans:
 
