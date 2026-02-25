@@ -84,7 +84,10 @@ body {
 }
 
 .container.wide {
-    max-width: 1000px;
+    width: 90vw;         /* take 90% of the viewport width */
+    max-width: 95vw;     /* never exceed 95% just in case */
+    margin: 120px auto 40px;  /* keep vertical spacing and center */
+    padding: 24px;
 }
 
 /* ---------- ABOUT PAGE LAYOUT ---------- */
