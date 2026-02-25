@@ -1,4 +1,5 @@
 // ---- DOM REFERENCES ----
+const skipButton = document.getElementById('skipButton');
 const timesClicked = document.getElementById('timesClicked');
 const clickButton = document.getElementById('clickMe');
 const resetButton = document.getElementById('reset');
@@ -11,6 +12,7 @@ const solutionStatus = document.getElementById('status');
 
 // ---- STATE ----
 let clicks = 0;
+let skipped = false;
 
 // ---- PROGRESSION ----
 function tier(clicks) {
@@ -72,17 +74,17 @@ function updateText(level) {
     } else if (level === 1) {
         clicksLeftTo.textContent = `${remaining} more click${remaining === 1 ? '' : 's'} to unlock a math problem`;
     } else if (level === 2) {
-        clicksLeftTo.textContent = `${remaining} more click${remaining === 1 ? '' : 's'} to unlock the menu bar`;
+        clicksLeftTo.textContent = `${remaining} more click${remaining === 1 ? '' : 's'} to unlock the menu bar and be taken to my about me page`;
     } else {
         clicksLeftTo.textContent = 'All features have been unlocked!';
     }
-
-    resetButton.classList.toggle('hidden', clicks === 0);
 }
 
 function updateVisibility(level) {
+    resetButton.classList.toggle('hidden', clicks === 0);
     selfie.classList.toggle('hidden', level < 1);
     menuBar.classList.toggle('hidden', level < 3);
+    skipButton.classList.toggle('hidden', level === 3);
 
     if (level === 2) {
         additionProblem.show();
@@ -99,14 +101,26 @@ function render() {
 }
 
 // ---- EVENTS ----
+skipButton.addEventListener('click', () => {
+    skipped = true;
+    clicks = clicks + 50;
+    localStorage.setItem('clicks', clicks.toString());
+    render();
+    alert('You\'re no fun!');
+    window.location.href = 'aboutMe.html';
+});
+
 clickButton.addEventListener('click', () => {
     const level = tier(clicks);
 
     if (level === 2) {
         if (!additionProblem.isSolved()) return;
     }
-
     clicks++;
+    localStorage.setItem('clicks', clicks.toString());
+    if (clicks === 50) {
+        window.location.href = 'aboutMe.html';
+    }
     render();
 });
 
@@ -120,10 +134,12 @@ answerInput.addEventListener('input', () => {
 
 resetButton.addEventListener('click', () => {
     clicks = 0;
+    localStorage.setItem('clicks', clicks.toString());
     additionProblem.generate();
     render();
 });
 
 // ---- INIT ----
+clicks = Number(localStorage.getItem('clicks'));
 additionProblem.generate();
 render();
