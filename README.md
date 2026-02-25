@@ -1,12 +1,10 @@
-Title:
+# Personal Portfolio Website
 
-Personal Portfolio Website
+## Description:
 
-Description:
+*This is my personal portfolio website built using HTML, CSS, and JavaScript. It will be used to experiment with UI, game logic, and progressive feature unlocking. It is an ongoing project that will be expanded over time.*
 
-This is my personal portfolio website built using HTML, CSS, and JavaScript. It will be used to experiment with UI, game logic, and progressive feature unlocking. It is an ongoing project that will be expanded over time.
-
-Features:
+## Features:
 
 - progressive feature unlocking using JavaScript state
 - interactive navbar with dropdown menus
@@ -14,25 +12,23 @@ Features:
 - multiple planned game pages (chess, platformer, tic-tac-toe)
 - responsive, themed UI
 
-Tech Stack:
+## Tech Stack:
 
 - HTML5
 - CSS3 (Flexbox, positioning, theming)
 - Vanilla JavaScript (DOM manipulation, state management)
 - Git / Github for version control
 
-To run locally:
+## To run locally:
 
-Clone the repo and open index.html in a browser.
+- Clone the repo and open [index.html](https://github.com/Colt452zz/portfolio-site/blob/main/index.html) in a browser.
 
-Future plans:
+## Future plans:
 
 - add fully playable games
 - improve animations and transitions
-- Persist progress using localStorage
 - expand About Me section
 
-Author:
+## Author:
 
-- built by Colton Selby
-- Github: https://github.com/Colt452zz
+- built by [Colton Selby](https://github.com/Colt452zz)
