@@ -82,7 +82,6 @@ function updateText(level) {
 function updateVisibility(level) {
     resetButton.classList.toggle('hidden', clicks === 0);
     selfie.classList.toggle('hidden', level < 1);
-    menuBar.classList.toggle('hidden', level < 3);
     skipButton.classList.toggle('hidden', level === 3);
 
     if (level === 2) {
@@ -93,10 +92,26 @@ function updateVisibility(level) {
     }
 }
 
+function updateMenuLinks(unlocked) {
+    const dropdown = document.querySelector("#menuBar .dropdown");
+    const homeAbout = document.querySelectorAll("#menuBar > a:not(.external)");
+
+    if (unlocked) {
+        dropdown.classList.remove("menu-disabled");
+        dropdown.querySelector(".dropbtn").classList.remove("menu-disabled");
+        homeAbout.forEach(a => a.classList.remove("menu-disabled"));
+    } else {
+        dropdown.classList.add("menu-disabled");
+        dropdown.querySelector(".dropbtn").classList.add("menu-disabled");
+        homeAbout.forEach(a => a.classList.add("menu-disabled"));
+    }
+}
+
 function render() {
     const level = tier(clicks);
     updateText(level);
     updateVisibility(level);
+    updateMenuLinks(level >= 3);
 }
 
 // ---- EVENTS ----
