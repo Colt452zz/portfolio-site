@@ -1,0 +1,18 @@
+/* hard-disable-navbar.css */
+
+/* Block all pointer interaction */
+body.menu-disabled .navbar,
+body.menu-disabled .navbar * {
+  pointer-events: none;
+  cursor: default;
+}
+
+/* Visually dim */
+body.menu-disabled .navbar a {
+  color: rgba(255,255,255,0.45);
+}
+
+/* NUCLEAR OPTION: override the hover rule itself */
+body.menu-disabled .dropdown:hover .dropdown-content {
+  display: none !important;
+}

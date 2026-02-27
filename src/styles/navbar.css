@@ -1,5 +1,3 @@
-/* navbar.css */
-
 /* NAVBAR */
 .navbar {
   position: fixed;
@@ -25,16 +23,15 @@
   text-decoration: none;
 }
 
-.dropbtn {
-  display: flex;
-  align-items: center;
-  color: white;
-}
-
 /* DROPDOWN */
 .dropdown {
   position: relative;
   display: flex;
+}
+
+.dropbtn {
+  display: flex;
+  align-items: center;
 }
 
 .dropdown-content {
@@ -46,7 +43,7 @@
   background-color: #24242a;
   min-width: 180px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.5);
-  z-index: 1000;
+  z-index: 2000;
 }
 
 .dropdown-content a {
@@ -56,20 +53,4 @@
 
 .dropdown:hover .dropdown-content {
   display: block;
-}
-
-/* DISABLED MENU */
-.menu-disabled,
-.menu-disabled a,
-.menu-disabled .dropbtn {
-  color: rgba(255,255,255,0.45) !important;
-  pointer-events: none;
-  cursor: default;
-  background-color: inherit !important;
-}
-
-.menu-disabled a:hover,
-.menu-disabled .dropbtn:hover {
-  color: rgba(255,255,255,0.45) !important;
-  background-color: inherit !important;
 }
