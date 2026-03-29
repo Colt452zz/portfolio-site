@@ -9,10 +9,11 @@
   box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
 
-.container.centered {
+.centered {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 .container.wide {

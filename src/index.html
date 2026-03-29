@@ -1,53 +1,73 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Colton Selby">
-        <meta name="keywords" content="html, css, javascript, personal, portfolio, webdev">
-        <meta name="description" content="This is my personal site, which I will be using to learn and play around with the basics of web development">
-        <link rel="stylesheet" href="styles/base.css">
-        <link rel="stylesheet" href="styles/layout.css">
-        <link rel="stylesheet" href="styles/navbar.css">
-        <link rel="stylesheet" href="styles/buttons.css">
-        <link rel="stylesheet" href="styles/images.css">
-        <link rel="stylesheet" href="styles/disabled-menu.css">
-        <script src="scripts/index.js" defer></script>
-    </head>
-    <body class="menu-disabled">
-        <div class="navbar menu-disabled" id="menuBar">
-            <a href="index.html">Home</a>
-            <a href="aboutMe.html">About Me</a>
-            <div class="dropdown">
-                <a href="games.html" class="dropbtn">Games</a>
-                <div class="dropdown-content">
-                    <a href="chess.html">Chess</a>
-                    <a href="platformer.html">Platformer</a>
-                    <a href="ticTacToe.html">Tic Tac Toe</a>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Colton Selby">
+    <meta name="keywords" content="html, css, javascript, personal, portfolio, webdev">
+    <meta name="description" content="About me page">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/images.css">
+    <link rel="stylesheet" href="styles/cards.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <a href="games.html" class="dropbtn">Games</a>
+            <div class="dropdown-content">
+                <a href="chess.html">Chess</a>
+                <a href="platformer.html">Platformer</a>
+                <a href="ticTacToe.html">Tic Tac Toe</a>
+                <a href="clicker.html">Clicker</a>
+            </div>
+        </div>
+        <a class="external" href="https://github.com/Colt452zz" target="_blank">
+            Github
+            <img src="../images/box-arrow-up-right-svgrepo-com.svg" width="16" height="16">
+        </a>
+    </div>
+    <div class="container wide">
+        <div class="page-layout">
+            <div class="page-header">
+                <h1>About Me</h1>
+            </div>
+            <div class="card-row">
+                <div class="image-card">
+                    <a href="../images/20260218_173029.jpg" target="_blank" class="selfie">
+                        <img src="../images/20260218_173029.jpg" alt="a picture of me">
+                    </a>
+                </div>
+                <div class="card">
+                    <p>
+                        Hi, I'm Colton — a freshman Computer Science student with a passion for building things from the
+                        ground up. Growing up playing games sparked a curiosity that eventually became a drive to create
+                        them myself, and that passion has shaped the way I approach programming as a whole. I believe
+                        the best way to learn is to write real code, break things, and figure out why.
+                    </p>
+                </div>
+                <div class="card">
+                    <p>
+                        Right now I'm working on a growing portfolio of JavaScript projects, including a clicker game,
+                        local multiplayer games like Tic Tac Toe and Chess, and eventually a platformer with AI
+                        opponents. My long-term goal is to tackle increasingly complex problems — like implementing
+                        unbeatable AI and integrating chess engines — one project at a time.
+                    </p>
+                </div>
+                <div class="card">
+                    <p>
+                        I'm always open to opportunities that let me keep growing as a developer — whether that's an
+                        internship, freelance work, or just an interesting collaboration. Feel free to check out my work
+                        on GitHub.
+                    </p>
                 </div>
             </div>
-            <a class="external" href="https://github.com/Colt452zz" target="_blank">
-                Github
-                <img src="../images/box-arrow-up-right-svgrepo-com.svg" width="16" height="16">
-            </a>
         </div>
-        <div class="container centered">
-            <h1>Colton Selby</h1>
-            <a href="../images/20260218_173029.jpg" target="_blank" class="hidden selfie" id="selfie">
-                <img src="../images/20260218_173029.jpg" alt="a picture of me" width="631" height="842">
-            </a>
-            <p>I am learning web dev.</p>
-            <button id="clickMe" class="input">Click Me!</button>
-            <div class="equation hidden" id="equation">
-                <p>You must solve this equation before further clicks will be counted:</p>
-                <label for="answer"></label>
-                <input type="number" id="answer">
-            </div>
-            <p id="status" class="hidden">Correct!</p>
-            <p id="timesClicked">You haven't clicked the button yet</p>
-            <p id="clicksLeftTo">10 more clicks to unlock my picture</p>
-            <button id="reset" class="input hidden">Reset</button>
-            <button id="skipButton" class="input">+50 Clicks (unlocks all features)</button>
-        </div>
-    </body>
+    </div>
+</body>
+
 </html>

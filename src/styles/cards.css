@@ -1,24 +1,24 @@
-/* about.css */
+/* cards.css */
 
-.about-layout {
+.page-layout {
   display: flex;
   flex-direction: column;
   gap: 32px;
 }
 
-.about-header {
+.page-header {
   display: flex;
   justify-content: center;
 }
 
-.about-content {
+.card-row {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
 }
 
-.about-card {
+.card {
   flex: 1 1 250px;
   max-width: 400px;
   background-color: #2e2e36;
