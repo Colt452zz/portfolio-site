@@ -10,11 +10,6 @@ body {
   color: #ffffff;
 }
 
-/* UTIL */
-.hidden {
-  display: none;
-}
-
 .external {
   float: right;
 }

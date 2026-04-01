@@ -26,11 +26,3 @@
   border-radius: 8px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.35);
 }
-
-.image-card {
-  display: inline-flex;
-  padding: 12px;
-  border-radius: 8px;
-  background-color: #2e2e36;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.35);
-}
